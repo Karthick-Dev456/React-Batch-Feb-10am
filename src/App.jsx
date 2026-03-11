@@ -3,17 +3,16 @@ import Student from './components/Student'
 import List from './components/List'
 import Tables from './components/Tables'
 import Form from './components/Form'
+import Events from './components/Events'
+import State from './components/State'
 
 const App = () => {
 
     return (
         <div>
-            <Student></Student>
-            <List></List>
-            <Tables></Tables>
-            <Form></Form>
+            <State></State>
         </div>
     )
 }
 
-export default App 
+export default App
