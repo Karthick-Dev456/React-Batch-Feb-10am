@@ -1,6 +1,11 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 const ListRendering = () => {
+
+    const location = useLocation()
+
+    const data = location.state
 
     const all_students = [
         {
@@ -38,7 +43,7 @@ const ListRendering = () => {
 
     return (
         <div>
-            <table>
+            {/* <table>
                 <thead>
                     <tr>
                         <th>S.No</th>
@@ -51,7 +56,10 @@ const ListRendering = () => {
                 <tbody>
                     {student_list}
                 </tbody>
-            </table>
+            </table> */}
+
+            <h1>List Rendering Component</h1>
+            <h1>Package: {data.framework}</h1>
         </div>
     )
 }

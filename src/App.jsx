@@ -10,6 +10,7 @@ import State from './components/State'
 import Conditional from './components/Conditional'
 import Task1 from './tasks/Task1'
 import ListRendering from './components/ListRendering'
+import Reference from './components/Reference'
 
 import Navbar from './components/Navbar'
 
@@ -23,9 +24,10 @@ const App = () => {
             <Routes>
 
                 <Route path='/student' element={<Student />} />
-                <Route path='/list/rendering' element={<ListRendering />} />
+                <Route path='/list/rendering' element={<ListRendering  />} />
                 <Route path='/tables' element={<Tables />} />
                 <Route path='/state' element={<State />} />
+                <Route path='/reference' element={<Reference />} />
 
             </Routes>
         </div>

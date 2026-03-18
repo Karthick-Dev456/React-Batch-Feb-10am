@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Tables = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div>
 
@@ -54,6 +58,7 @@ const Tables = () => {
 
             </table>
 
+            <button onClick={() => navigate('/list/rendering', {state: {framework: "Angular"}})}>List Rendering</button>
         
         </div>
     )
