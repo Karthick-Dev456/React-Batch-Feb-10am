@@ -20,6 +20,9 @@ const Navbar = () => {
                 <li>
                     <NavLink to='/reference'>Reference</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/post/list'>All-Posts</NavLink>
+                </li>
             </ul>
         </nav>
     )

@@ -14,6 +14,8 @@ import Reference from './components/Reference'
 
 import Navbar from './components/Navbar'
 
+import PostList from './components/posts/PostList'
+
 const App = () => {
 
     return (
@@ -28,6 +30,8 @@ const App = () => {
                 <Route path='/tables' element={<Tables />} />
                 <Route path='/state' element={<State />} />
                 <Route path='/reference' element={<Reference />} />
+
+                <Route path='/post/list' element={<PostList />} />
 
             </Routes>
         </div>
