@@ -1,7 +1,10 @@
 import React, { useEffect, useState} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const PostList = () => {
+
+    const navigate = useNavigate()
 
     const [posts, setPosts] = useState([])
 
@@ -12,7 +15,7 @@ const PostList = () => {
             setPosts(response.data)
         })
         .catch(error => console.log(error))
-    })
+    }, [])
 
     const postList = posts.map((post, index) => {
         return (
@@ -21,6 +24,10 @@ const PostList = () => {
                 <td>{post.title}</td>
                 <td>{post.userId}</td>
                 <td>{post.body}</td>
+                <td>
+                    <button onClick={() => navigate(`/post/view/${post.id}`, {state: post})}>View</button>
+                    <button onClick={() => navigate(`/post/update/${post.id}`, {state: post})}>Edit</button>
+                </td>
             </tr>
         )
     })
@@ -34,6 +41,7 @@ const PostList = () => {
                         <th>Title</th>
                         <th>User Id</th>
                         <th>Content</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 
